@@ -1,0 +1,231 @@
+{
+  "menu": [
+
+    {
+      "url": "/",
+      "name": "Dashboard",
+      "icon": "menu-icon tf-icons ri-home-smile-line",
+      "slug": "dashboard"
+    },
+
+    {
+      "name": "Settings",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "settings",
+      "submenu": [
+        {
+          "url": "/settings",
+          "name": "General Settings",
+          "slug": "generalsettings"
+        },
+        {
+          "url": "/settings/profile/settings",
+          "name": "Profile Settings",
+          "slug": "profilesettings"
+        }
+      ]
+    },
+    
+    {
+      "name": "Notification",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "notification",
+      "submenu": [
+        {
+          "url": "/notification",
+          "name": "User Notification",
+          "slug": "usernotification"
+        },
+        {
+          "url": "/add-notification",
+          "name": "Add Notification",
+          "slug": "addnotification"
+        }
+      ]
+    },
+
+
+
+    {
+      "name": "Courses",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "Courses",
+      "submenu": [
+        {
+          "url": "/add/course",
+          "name": "Add Courses",
+          "slug": "addcourse"
+        },
+        {
+          "url": "/courses",
+          "name": "All Courses",
+          "slug": "allcourses"
+        },
+        {
+          "url": "/excel/upload",
+          "name": "Excel Upload",
+          "slug": "excel_upload"
+        }
+      ]
+    },
+
+    
+    {
+      "name": "Subscriber",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "subscriber",
+      "submenu": [
+        {
+          "url": "/subscribers",
+          "name": "Subscribers",
+          "slug": "subscribers"
+        }
+      ]
+    },
+
+    {
+      "name": "Blogs",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "subscriber",
+      "submenu": [
+        {
+          "url": "/addblog",
+          "name": "Add Blog",
+          "slug": "addblog"
+        },
+        {
+          "url": "/viewblogs",
+          "name": "View Blog",
+          "slug": "viewblogs"
+        }
+      ]
+    },
+
+
+    {
+      "name": "Feedbacks",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "subscriber",
+      "submenu": [
+        {
+          "url": "/add/feedback",
+          "name": "Add Feedback",
+          "slug": "addfeedback"
+        },
+        {
+          "url": "/get/feedbacks",
+          "name": "View Feedback",
+          "slug": "viewfeedback"
+        }
+      ]
+    },
+
+
+    {
+      "name": "Guidance Packages",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "subscriber",
+      "submenu": [
+        {
+          "url": "add/singlesession",
+          "name": "Add Single Pack",
+          "slug": "add/singlesession"
+        },
+        {
+          "url": "add/bundle1",
+          "name": "Add Bundle 1",
+          "slug": "add/bundle1"
+        }
+        ,
+        {
+          "url": "add/bundle2",
+          "name": "Add Bundle 2",
+          "slug": "add/bundle2"
+        }
+        ,
+        {
+          "url": "get/sessions",
+          "name": "View Packages",
+          "slug": "get/sessions"
+        }
+      ]
+    },
+
+    {
+      "name": "Users",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "users",
+      "submenu": [
+        {
+          "url": "add/user",
+          "name": "Add User",
+          "slug": "adduser"
+        },
+        {
+          "url": "get/all/users",
+          "name": "View User",
+          "slug": "viewuser"
+        }
+      ]
+    },
+    
+
+    {
+      "name": "Payments",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "payments",
+      "submenu": [
+        {
+          "url": "/stripe/get/payments",
+          "name": "Payments",
+          "slug": "payments"
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "users",
+      "submenu": [
+        {
+          "url": "list/contact/us",
+          "name": "Contact Us",
+          "slug": "contactus"
+        }
+      ]
+    },
+    {
+      "name": "Sessions",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "sessions",
+      "submenu": [
+        {
+          "url": "appointment-list",
+          "name": "Sessions List",
+          "slug": "sessionslist"
+        }
+      ]
+    },
+
+    {
+      "name": "Role and Permissions",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "Permissions",
+      "submenu": [
+        {
+          "url": "permissions-index",
+          "name": "Permissions List",
+          "slug": "permissionslist"
+        },
+        {
+          "url": "roles-index",
+          "name": "Role List",
+          "slug": "rolelist"
+        }
+      ]
+    }
+
+    
+    
+  ]
+}

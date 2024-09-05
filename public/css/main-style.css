@@ -1,0 +1,3069 @@
+
+/*Main Style*/
+
+html,body{
+  width: 100%;
+  height: 100%;
+  margin:0;
+  padding: 0;
+}
+
+body{
+  font-family: 'poppins', sans-serif!important;
+  padding: 0;
+  margin:0;
+}
+body::-webkit-scrollbar {
+    width: 5px;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+    background-color: var(--black-color);
+    outline: 1px solid slategrey;
+}
+ul, ol{
+  list-style: none!important;
+  padding:0;
+  margin:0 !important;
+}
+p{
+  margin-bottom:15px!important;
+  font-size: 14px;
+  line-height: 26px;
+}
+input[type="submit"]:hover{
+    border-color: var(--primary-color)!important;
+}
+a:hover, a{
+  text-decoration: none;
+}
+a, button, .caption-text h2{
+    transition: 0.5s ease-in-out!important;
+}
+
+:root {
+  --primary-color: #ffcc01;
+  --secondry-color: #1b4ba6;
+  --white-color: #fff;
+  --black-color: #000;
+}
+/*=====================
+  header
+=====================*/
+.main-navigation .menu-toggle{
+	display: none;
+}
+.main-header.sticky {
+    position: fixed;
+    transition: 0.3s ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0!important;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 13px 0;
+}
+.site-header{
+	padding: 11px 0;
+}
+.dashborad-header .main-header.sticky{
+  background: #ffffffab!important;
+}
+.dashborad-header.oks-dasboard-sticky{
+  padding: 0!important;
+}
+.dashborad-header .oks-primary-menu ul li a,
+.dashborad-header .oks-user-info ul li a,
+.oks-sign-up-header .oks-primary-menu ul li a,
+.oks-sign-up-header .oks-user-info ul li a
+{
+  color: #fff!important;
+}
+.oks-login-footer .social-button ul li{
+  background: var(--secondry-color)!important;
+}
+.oks-login-footer .footer-bottom,
+.oks-sign-footer .footer-bottom{
+  border: none;
+}
+.oks-sign-footer.oks-site-footer 
+, .oks-login-footer{
+    padding: 0!important;
+}
+.dashborad-header .menu-toggle .fa-bars,
+.oks-sign-up-header .menu-toggle .fa-bars{
+  color: #fff!important;
+}
+/*.oks-login-footer .social-button ul li a{
+  color: var(--secondry-color)!important;
+}*/
+.oks-subscription-plan span{
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 26px;
+    padding-right: 16px;
+    color: #000;
+    border-right: 1px solid #252424d4;
+}
+.oks-subscription-plan span.session{
+  border-right: none!important;
+}
+.oks-subscription-plan p{
+      font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000;
+    margin: 17px 0 11px!important;
+}
+.oks-subscription-plan-wrap small{
+  font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+    display: block;
+    padding: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    background: var(--secondry-color);
+    color: #fff!important;
+}
+.oks-subscription-plan ul{
+      margin-top: 10px!important;
+}
+.dashborad-header{
+  position: absolute;
+    top: 0;
+    padding: 10px 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff00;
+    z-index: 99;
+    box-shadow: 0 0 14px -4px;
+}
+.site-logo a img{
+	width: 100%;
+	max-width: 120px;
+}
+.oks-blog-video.owl-carousel .owl-dots.disabled,
+.oks-testimonial-slider.owl-carousel .owl-dots.disabled{
+    display: block;
+    text-align: center;
+  margin-top: 26px;
+  }
+
+  .owl-dots button span, .oks-testimonial-slider.owl-carousel .owl-dots button span{
+    background: var(--secondry-color);
+    width: 10px;
+    opacity: 0.5;
+    display: block;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .oks-testimonial-slider.owl-carousel .owl-dots button span{
+    background: #fff!important;
+  }
+  .owl-dots button.active span, .oks-testimonial-slider.owl-carousel .owl-dots button.active span{
+    opacity: 1;
+  }
+.oks-main-menu #site-navigation ul{
+	display: flex;
+	align-items: center;
+  justify-content: flex-end;
+}
+.oks-main-menu #site-navigation ul li{
+	font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-right: 50px;
+}
+.oks-main-menu #site-navigation ul .oks-submenu-container ul li a
+{
+	color: #000!important;
+}
+.oks-main-menu #site-navigation ul li a{
+  color: #000;
+}
+.oks-main-menu #site-navigation ul li a i{
+    margin-left: 9px;
+}
+.oks-submenu-container{
+  position: relative;
+}
+.oks-primary-menu ul li:hover .oks-submenu-container ul{
+  visibility: visible;
+  opacity: 1;
+}
+.oks-submenu-container ul{
+        display: block!important;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+    border-radius: 9px;
+    padding: 5px 15px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    width: 130px;
+    left: -27px;
+    top: 45px;
+}
+.oks-submenu-container ul li{
+    padding: 10px 0;
+    font-size: 12px!important;
+    line-height: 22px!important;
+    border-bottom: 1px solid #d3d3d34a;
+    margin-right: 0!important;
+}
+.oks-submenu-container ul li:last-child{
+  border: none;
+}
+/*=====================
+  Banner
+=====================*/
+.oks-banner-section{
+  position: relative;
+  height: 650px;
+}
+.oks-banner-section video, .oks-testimonial-section video{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.oks-testimonial-video-wrap{
+  height: 700px!important;
+}
+.oks-home-banner, .oks-testimonial-video-wrap{
+	  height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgb(0 0 0 / 62%), rgb(0 0 0 / 71%));
+    width: 100%;
+}
+.oks-select-course select, .oks-selec-bar select, .oks-select-course input{
+	   height: 54px;
+    padding: 10px 20px;
+    width: 100%;
+    border: 0;
+    font-size: 14px;
+    border-radius: 4px;
+    line-height: 24px;
+}
+.oks-select-course input::placeholder {
+  color: #000;
+  opacity: 1;
+}
+.oks-banner-content h1{
+	font-size: 62px;
+    line-height: 72px;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin: 0 20px 31px;
+}
+.oks-banner-content h1 span{
+  display: block;
+}
+.oks-banner-content p{
+	color: var(--primary-color);
+    font-size: 22px;
+    line-height: 32px;
+    margin-top: 30px;
+}
+.oks-banner-content{
+	text-align: center;
+}
+.oks-dis-button button{
+     font-size: 16px!important;
+    line-height: 25px!important;
+    font-weight: 500;
+}
+.btn-form-search, .oks-dis-button button{
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: none;
+  color: #000!important;
+  box-shadow: none;
+  color: #656565;
+  line-height: 57px;
+  font-size: 20px;
+  height: 54px;
+  outline: none;
+  margin: 0;
+  padding: 0px 20px 0 20px;
+  width: 100%;
+}
+/*=====================
+  about
+=====================*/
+.oks-home-about{
+  padding: 100px 0 105px;
+}
+.oks-country-information, .oks-decipline-section, .oks-faqs-section{
+	 padding: 80px 0 90px;
+}
+.oks-section-content h2 span{
+  color: var(--primary-color);
+}
+.oks-uni-content p{
+  margin-bottom: 20px!important;
+}
+.oks-team-member{
+  margin-bottom: 30px!important;
+}
+.oks-uni-content a{
+    display: block;
+    max-width: 170px;
+    text-align: center;
+}
+.oks-section-heading h2, .oks-consult-serv-wrap h2, .oks-section-content h2,
+.ks-section-content h2, .oks-testimonial-content h2, .oks-blogs-content h2, .oks-about-cont-content h2,
+.oks-contact-form-wrap h2{
+	font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    margin-bottom: 45px;
+    text-align: center;
+    color: #000;
+}
+.oks-about-image img{
+	width: 82%;
+  margin: 0 auto;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.adtn-serive-card-box h3, .adtn-disp-card-box h3{
+	font-size: 17px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000;
+}
+.adtn-serive-card-box p, .adtn-disp-card-box p{
+      font-size: 13px;
+    line-height: 24px;
+}
+.oks-section-content ul li:last-child{
+	border: none;
+}
+.oks-popup-cross-btn{
+  position: absolute;
+  right: 21px;
+  cursor: pointer;
+  font-size: 22px;
+  color: #FFF;
+  top: 6px;
+}
+.adtn-serive-card-box .oks-icon, .adtn-disp-card-box .oks-icon,
+.oks-about-cont-content .oks-icon{
+   background: var(--secondry-color);
+    width: 75px;
+    height: 75px;
+    padding: 21px;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+}
+.oks-about-cont-content:hover .oks-icon{
+  background: var(--primary-color);
+}
+.oks-about-cont-content .oks-icon{
+  padding: 15px!important;
+}
+.adtn-serive-card-box .oks-icon img, .oks-single-team-image img, .oks-consult-image img,
+.adtn-disp-card-box .oks-icon img{
+  width: 100%;
+}
+.oks-austria-sidebar{
+    background: #d7e2e524;
+    padding: 25px 30px;
+    margin-right: 30px;
+}
+.oks-austria-sidebar ul li{
+  padding: 15px 0;
+  border-bottom: 1px solid #d3d3d361;
+}
+.oks-austria-sidebar ul li:last-child{
+  border-bottom: none;
+}
+.oks-austria-sidebar ul li a{
+      color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+/*=====================
+  cosult
+=====================*/
+.oks-consult-service{
+  background: var(--secondry-color);
+  background-position: 100% 34%;
+  background-image: linear-gradient(rgb(0 0 0 / 28%), rgb(0 0 0 / 28%)),url('../image/counseling.jpeg');
+  padding: 95px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.oks-consult-serv-wrap, .oks-easyguide-content{
+  padding: 50px;
+  background: #000000ab;
+  border-radius: 9px;
+}
+.oks-cosult-image img{
+    height: 515px;
+    padding-top: 15px;
+}
+.oks-easyguide-section{
+	background: var(--secondry-color);
+	background-image: url(../image/why-ekas-home.jpeg);
+  padding: 89px 0;
+      background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+ .oks-easyguide-content h2 {
+  color: var(--primary-color)!important;
+ }
+.oks-consult-serv-wrap h2 span{
+	color: var(--primary-color);
+  display: block;
+}
+.oks-consult-serv-wrap h2, .oks-easyguide-content h2{
+	  color: #fff;
+    text-align: left;
+    font-size: 38px;
+    line-height: 49px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.oks-about-cont-content{
+  padding: 25px;
+      margin: 0 10px;
+  box-shadow: 0 0px 17px 0 rgba(0,0,0,.1)!important;
+  text-align: center;
+  border-radius: 4px;
+}
+.oks-about-cont-content img{
+      width: 100%;
+}
+.oks-about-cont-content p{
+  font-size: 13px!important;
+    line-height: 24px!important;
+}
+.oks-about-cont-content h3{
+  font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+    margin: 11px 0 13px;
+    color: #000;
+}
+.oks-consult-serv-wrap h5{
+	font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+}
+.oks-price-filter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.currency{
+  width: 17%;
+}
+.currency select{
+  padding: 6px!important;
+    height: 36px!important;
+}
+.price-filter {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+.eks-login-popup{
+      position: absolute;
+    width: 300px;
+    background: #ffff;
+    right: 80px;
+    top: 63px;
+    z-index: 99;
+    padding: 25px;
+    border-radius: 5px;
+}
+.eks-login-popup i, .eks-login-discover i{
+      position: absolute;
+    right: 15px;
+    top: 9px;
+}
+.eks-login-popup h3, .eks-login-discover h3{
+  font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+}
+.eks-login-discover a{
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secondry-color);
+  line-height: 24px;
+}
+.handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -4px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+.oks-consult-serv-wrap a, .oks-started-btn a, .oks-subscription-plan a, .oks-easyguide-content a,
+.oks-faqs-btn a{
+	background: var(--primary-color);
+    padding: 12px 18px;
+    display: block;
+    font-size: 15px;
+    line-height: 21px;
+    width: 155px;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+    margin-top: 27px;
+}
+.oks-faqs-btn a {
+      margin: 30px auto 0;
+}
+.wishlist-banner, .oks-blog-single{
+  padding: 76px 0!important;
+}
+.wishlist-banner .oks-banner-content h1{
+     font-size: 38px!important;
+    line-height: 54px!important;
+    margin:0!important;
+}
+.adtn-serive-card-box, .adtn-disp-card-box{
+    box-shadow: 0 10px 35px 0 rgba(0,0,0,.1);
+    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+    padding: 40px 30px 30px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    margin: 0 20px;
+    height: 100%;
+}
+/*=====================
+  Country
+=====================*/
+.oks-country-info{
+	background: #fff;
+    /* box-shadow: 0px 0px 10px -7px; */
+    border-radius: 9px;
+    border: 1px solid #d3d3d361;
+    text-align: center;
+    padding: 27px 25px;
+    margin: 0px 33px;
+}
+.oks-country-info img{
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+.oks-country-info:hover img{
+  transform: scale(1.1);
+}
+
+.oks-blogs-item .oks-blog-content{
+  margin-top: 15px;
+}
+.contr-image{
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
+}
+.oks-country-info h3{
+	font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    margin: 20px 0 18px;
+}
+.oks-country-info a{
+	width: 82%;
+    margin: auto;
+    display: block;
+    background: var(--secondry-color);
+    padding: 12px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 23px;
+    color: #fff;
+    font-weight: 600;
+}
+/*=====================
+  get started
+=====================*/
+.oks-get-started-section{
+	background-image: linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 / 20%)),url('../image/explore-home.jpeg');
+	padding: 120px 0;
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.oks-get-started-section .oks-section-content h2{
+	font-size: 44px;
+	color: #fff;
+    line-height: 60px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.oks-started-btn a{
+	width: 225px;
+	margin-right: 32px;
+}
+.oks-started-btn{
+	display: flex;
+	justify-content: center;
+}
+.oks-started-btn a:last-child{
+	background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+/*=====================
+  decipline
+=====================*/
+.adtn-disp-card-box{
+  margin:0!important;
+  box-shadow: 0 0px 17px 0 rgba(0,0,0,.1)!important;
+}
+/*=====================
+  decipline
+=====================*/
+.oks-easyguide-image img{
+	width: 93%;
+  height: 385px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.oks-easyguide-content p, .oks-content h3 a{
+	color: #ffff;
+}
+.oks-easyguide-image{
+	text-align: right;
+}
+.oks-decipline-wrap:hover{
+   box-shadow: 0px 0px 14px -2px rgb(0 0 0 / 12%);
+}
+/*=====================
+  FAQs
+=====================*/
+.oks-faqs-item{
+	text-align: left;
+	margin: 0px 0 22px 0!important;
+  background: #fff;
+   box-shadow: 0px 0px 10px -7px; 
+  border-radius: 5px;
+  border: 1px solid #d3d3d361;
+  text-align: center;
+  padding: 17px 20px;
+  margin: 0 14px;
+}
+.oks-faqs-item h3{
+	font-size: 16px;
+  line-height: 25px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0;
+}
+.fasq-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.oks-faqs-item p{
+  margin-bottom: 0!important;
+  margin-top: 7px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 22px;
+}
+.oks-testimonial-author-content p{
+	margin-bottom: 0!important;
+  font-weight: 600;
+  color: var(--secondry-color);
+}
+.oks-user-info ul, .oks-user-log-info ul{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.oks-user-info ul li{
+  margin-right: 25px;
+}
+.oks-user-log-info ul li{
+     margin-left: 32px!important;
+    margin-right: 22px;
+    text-align: center;
+    position: relative;
+}
+.oks-user-log-info ul li a{
+  color: #000;
+  font-size: 18px;
+  line-height: 24px;
+}
+.oks-user-log-info ul li a span, .menu-toggle span{
+  font-size: 12px;
+  line-height: 24px;
+    font-weight: 500;
+  display: block;
+}
+.oks-user-info ul li a{
+    color: #000;
+    font-size: 14px;
+    line-height: 24px;
+}
+/*=====================
+  Tetimonial
+=====================*/
+.oks-service-section{
+  padding-top:60px;
+}
+.service-subscription{
+  padding: 60px 0 70px!important;
+}
+.oks-testimonial-section{
+  position: relative;
+  height: 700px;
+}
+.oks-blogs-section, .oks-single-team, .oks-signup-form{
+  padding:80px 0;
+}
+.oks-testimonial-item{
+    padding: 35px;
+    background: #fff;
+    box-shadow: 0 0.7961918735236395px 2.3885756205709185px -0.625px #0000000d, 0 2.414506143104518px 7.2435184293135535px -1.25px #0000000d, 0 6.382653521484461px 19.147960564453385px -1.875px #0000000d, 0 20px 60px -2.5px #0000000d;
+    border-radius: 8px;
+    height: 362px;
+}
+.oks-testimonial-content h2{
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 45px;
+}
+.oks-testimonial-content h2 span{
+  color: var(--primary-color);
+}
+.oks-testimonial-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.oks-testimonial-img img{
+  width: 75px!important;
+  border-radius: 50%;
+  object-fit: cover;
+  height: 75px;
+}
+.oks-testimonial-author-content h4{
+      font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+.oks-testimonial-author-content{
+  width: calc(100% - 100px);
+}
+/*=====================
+  footer
+=====================*/
+.oks-site-footer{
+	padding: 64px 0 15px;
+}
+.footer-col h4{
+	color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+.footer-col ul li a{
+	color: #000;
+    font-size: 14px;
+    line-height: 20px;
+}
+.footer-col ul li{
+	padding: 5px 0;
+}
+.social-button ul{
+	display: flex;
+  justify-content: center;
+}
+.social-button ul li:last-child{
+  margin-right: 0
+}
+.social-button ul li{
+	 padding: 6px 0;
+    width: 35px;
+    color: #fff;
+    height: 34px;
+    margin-top: 12px;
+    margin-right: 14px;
+    text-align: center;
+    border-radius: 4px;
+    background: var(--secondry-color);
+}
+.social-button ul li a{
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+}
+.social-button{
+	margin-top: 30px;
+}
+
+.oks-copyright p{
+	color: #000000cf;
+  text-align: center;
+  margin-top: 18px;
+}
+.landing {
+  position: relative;
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgb(190, 231, 232);
+  background: linear-gradient( 149deg, #ffcc01 0%, #1b4ba6 30% );
+}
+.mountain-scene {
+  position: relative;
+  height: 82%;
+  /* border-style: solid; */
+  /* overflow:hidden; */
+  /* margin: 0; */
+}
+
+/* Background Mountains
+
+Triangles made using transform rotate
+width = 1.41 x height(padding-bottom) */
+
+.tri {
+  width: 33%;
+  padding-bottom: 27%;
+  position: relative;
+  overflow: hidden;
+}
+.tri:before {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 104%;
+  background: rgb(254, 194, 178);
+  background: linear-gradient(
+    180deg,
+    #6e94dc 0%,
+    #1b4ba6 55%
+  );
+  border-radius: 20px;
+
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.small-mountains .tri:nth-child(1) {
+  bottom: 0;
+  position: absolute;
+  left: -14%;
+}
+
+.small-mountains .tri:nth-child(2) {
+  bottom: 0;
+  position: absolute;
+  left: 40%;
+}
+
+.small-mountains .tri:nth-child(3) {
+  bottom: 0;
+  position: absolute;
+  right: -10%;
+}
+
+.tri2 {
+  width: 68%;
+  padding-bottom: 40%;
+  position: relative;
+  overflow: hidden;
+}
+.tri2:before {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 104%;
+  /* background: #726DA8; */
+  background: #1b4ba6;
+  background: linear-gradient(
+    180deg,
+    #6e94dc 0%,
+    #1b4ba6 55%
+  );
+  border-radius: 20px;
+
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.tall-mountains .tri2:nth-child(1) {
+  bottom: 0;
+  position: absolute;
+  left: -5%;
+}
+
+.tall-mountains .tri2:nth-child(2) {
+  bottom: 0;
+  position: absolute;
+  left: 14%;
+}
+
+.tall-mountains .tri2:nth-child(3) {
+  bottom: 0;
+  position: absolute;
+  left: 45%;
+}
+
+/* Foreground mountains */
+
+.tri3 {
+  width: 19%;
+  padding-bottom: 13%;
+  position: relative;
+  overflow: hidden;
+}
+
+.tri3:before {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 104%;
+  background: rgb(233, 243, 244);
+  background: linear-gradient(
+    180deg,
+    #e8e0c0 0%,
+    #ffcc01 72%
+  );
+  border-radius: 18px;
+
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.tiny-mountains .tri3:nth-child(1) {
+  bottom: 0;
+  position: absolute;
+  left: 9%;
+}
+.tiny-mountains .tri3:nth-child(2) {
+  bottom: -3%;
+  position: absolute;
+  left: 31%;
+}
+
+.tiny-mountains .tri3:nth-child(3) {
+  bottom: -7%;
+  position: absolute;
+  left: 42%;
+}
+
+.tiny-mountains .tri3:nth-child(4) {
+  bottom: 0;
+  position: absolute;
+  left: 72%;
+}
+
+.tiny-mountains .tri3:nth-child(5) {
+  bottom: -5%;
+  position: absolute;
+  left: 62%;
+}
+.ground {
+  position: relative;
+  height: 23%;
+  background: rgb(255, 246, 202);
+  background: linear-gradient(
+    180deg,
+    #e8e0c0 0%,
+    #ffcc01 72%
+  );
+}
+
+#clouds {
+  padding: 15vw 0;
+}
+
+/* base of cloud */
+.cloud {
+  height: 4vw;
+  width: 13vw;
+  background: white;
+  border-radius: 40vw;
+  position: relative;
+}
+
+/* smaller circle within cloud */
+.cloud:before {
+  content: "";
+  position: absolute;
+  top: -2vw;
+  height: 6vw;
+  width: 6vw;
+  left: 2vw;
+  border-radius: 50%;
+  background: white;
+}
+
+/* larger circle within cloud */
+.cloud:after {
+  content: "";
+  position: absolute;
+  height: 6vw;
+  width: 6vw;
+  top: -3vw;
+  left: 5vw;
+  border-radius: 50%;
+  background: white;
+}
+
+#clouds .cloud:nth-child(1) {
+  opacity: 0.7;
+  animation: moveclouds 17s linear infinite;
+  -webkit-animation: moveclouds 17s linear infinite;
+  -moz-animation: moveclouds 17s linear infinite;
+  -o-animation: moveclouds 17s linear infinite;
+}
+#clouds .cloud:nth-child(2) {
+  left: 75%;
+  opacity: 0.5;
+  animation: moveclouds 22s linear infinite;
+  -webkit-animation: moveclouds 22s linear infinite;
+  -moz-animation: moveclouds 22s linear infinite;
+  -o-animation: moveclouds 22s linear infinite;
+}
+#clouds .cloud:nth-child(3) {
+  left: 50%;
+  z-index: 1;
+  animation: moveclouds 15s linear infinite;
+  -webkit-animation: moveclouds 15s linear infinite;
+  -moz-animation: moveclouds 15s linear infinite;
+  -o-animation: moveclouds 15s linear infinite;
+}
+#clouds .cloud:nth-child(4) {
+  left: 90%;
+  opacity: 0.7;
+  transform: scale(0.6);
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  animation: moveclouds 16s linear infinite;
+  -webkit-animation: moveclouds 16s linear infinite;
+  -moz-animation: moveclouds 16s linear infinite;
+  -o-animation: moveclouds 16s linear infinite;
+}
+#clouds .cloud:nth-child(5) {
+  left: 100%;
+  opacity: 0.4;
+  z-index: 1;
+
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+
+  animation: moveclouds 22s linear infinite;
+  -webkit-animation: moveclouds 22s linear infinite;
+  -moz-animation: moveclouds 22s linear infinite;
+  -o-animation: moveclouds 22s linear infinite;
+}
+@keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+
+@-webkit-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+@-moz-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+@-o-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+/*=====================
+  SINGLE BLOG
+=====================*/
+.search-wrap, .oks-categories-list{
+    background: #fff;
+    padding: 30px 30px 30px;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 8%);
+    margin-bottom: 28px;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #f4f4f47a;
+}
+.search-wrap input{
+    border: 1px solid #dddddd87;
+    padding: 10px 14px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 1px;
+    line-height: 24px;
+}
+.search-wrap button{
+  position: absolute;
+  right: 35px;
+  background: none;
+  border: 0;
+  color: var(--secondry-color);
+  top: 36%;
+  font-size: 20px;
+  line-height: 30px;
+}
+.oks-categories-list h3{
+  font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000;
+}
+.oks-categories-list ul li a{
+  color: #000;
+}
+.oks-categories-list ul li:last-child{
+  border-bottom: none;
+}
+.oks-categories-list ul li{
+      font-size: 14px;
+    line-height: 24px;
+    padding: 10px 0;
+    border-bottom: 1px solid #d3d3d369;
+}
+.oks-categories-list ul li i{
+  font-size: 10px;
+    line-height: 18px;
+  color: var(--secondry-color);
+    margin-right: 10px;
+}
+.oks-categories-list .single-icon{
+  display: flex;
+  margin-top: 20px!important
+}
+.oks-categories-list .single-icon li{
+      border: none;
+    background: var(--secondry-color);
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    padding: 7px 4px;
+    margin-right: 11px;
+    height: 35px;
+}
+.oks-categories-list .single-icon li a i{
+  color: #fff!important;
+    font-size: 17px;
+    line-height: 13px;
+    text-align: center;
+    margin: 0 auto;
+}
+.oks-single-blog-detail{
+    border: 1px solid #d3d3d354;
+    padding: 28px;
+}
+.oks-single-blog-detail h2{
+    font-size: 21px;
+    line-height: 33px;
+    font-weight: 700;
+    color: #000;
+}
+.oks-single-blog-detail ul{
+      display: flex;
+    border-bottom: 1px solid #d3d3d33d;
+    padding: 7px 0 17px;
+    margin-bottom: 17px!important;
+}
+.oks-single-blog-detail ul li{
+     font-size: 13px;
+    line-height: 23px;
+    margin-right: 20px
+}
+.oks-single-blog-detail ul li i{
+      color: var(--secondry-color);
+    margin-right: 9px;
+}
+/*=====================
+  News Letter
+=====================*/
+.oks-about-image{
+  text-align: center;
+}
+.oks-subscribe-section{
+  background: var(--secondry-color);
+  padding: 60px 0;
+}
+.oks-subscripe-content h2{
+  color: #fff;
+  text-align: left;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.oks-subscripe-content p{
+      color: #fff;
+}
+.oks-subscripe-bar input{
+    height: 48px;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 4px;
+    border: 0;
+}
+.oks-subscripe-bar{
+  position: relative;
+}
+.oks-subscripe-bar .oks-submit{
+     background: var(--primary-color);
+    top: 0px;
+    position: absolute;
+    right: 0;
+    border: 0;
+    height: 48px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    width: 123px;
+}
+.oks-blogs-item img{
+      width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+.oks-blogs-item .contr-blog-image{
+  margin-bottom: 20px;
+}
+.oks-blog-content h3{
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 700;
+}
+.oks-blog-content p{
+    font-size: 13px;
+    line-height: 23px;
+}
+.oks-blog-content a{
+      font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #000;
+}
+.oks-blog-content a i{
+  margin-left: 8px;
+}
+.oks-subscription-plan{
+      background-color: #fff;
+    padding: 25px 34px 40px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+}
+.oks-subscription-plan-wrap{
+  border: 1px solid #e8eaea;
+  margin: 0 10px;
+  box-shadow: 0px 0px 14px -2px rgb(0 0 0 / 12%); 
+  border-radius: 5px;
+}
+.oks-subscription-plan h2{
+    font-size: 48px;
+    line-height: 51px;
+    margin: 15px 0;
+    font-weight: 700;
+}
+.oks-subscription-plan ul li{
+  padding: 6px 0;
+    font-size: 14px;
+    line-height: 24px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+.oks-subscription-plan ul li i{
+    font-size: 9px;
+    background: #1c1c1c;
+    padding: 3px;
+    vertical-align: middle;
+    border-radius: 15px;
+    color: #ffff;
+    margin-right: 10px;
+}
+.oks-subscription-plan a{
+    padding: 8px 13px;
+    display: block;
+    font-size: 13px;
+    color: #000;
+    border-radius: 3px;
+    background: var(--primary-color);
+    line-height: 24px;
+    width: 122px;
+    margin-top: 20px;
+}
+.oks-austria-content-info, .oks-discover-after-banner, .oks-whisl-none-section{
+  padding: 80px 0;
+}
+.oks-about-banner .oks-banner-content h1 {
+    font-size: 58px!important;
+    line-height: 66px!important;
+}
+.oks-listing-blog .oks-blogs-item{
+  margin-bottom: 25px;
+  border: 1px solid #d3d3d35e;
+    padding: 21px;
+    border-radius: 7px;
+}
+.oks-listing-blog{
+  padding: 70px 0;
+}
+
+/*ABOUT US & inner Pages*/
+.oks-about-banner, .oks-explore-banner, .oks-belgium-banner, .oks-finland-banner, .oks-discover-banner,
+.wishlist-banner{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 125px 0;
+  background-image: linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)), url(../image/why-ekas-home.jpeg);
+}
+.oks-austria-sec-image img{
+      width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+.oks-austria-sec-content{
+  margin-bottom: 30px;
+}
+.oks-austria-sec-content .oks-icon{
+  width: 56px;
+  background: #346edc14;
+  padding: 11px;
+  border: 1px solid #1b4ba6;
+  margin-bottom: 14px;
+}
+.oks-austria-sec-content .oks-icon img{
+  width: 100%;
+}
+.oks-explore-banner .oks-banner-content p, .oks-belgium-banner .oks-banner-content p, .oks-finland-banner p{
+    color: #ffffffc7;
+    font-size: 18px;
+    line-height: 29px;
+    margin-top: 30px;
+}
+
+.oks-austria-sec-content h3{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 5px;
+  }
+.oks-austria-sec-content ul li{
+  font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 10px;
+}
+.oks-austria-sec-content ul li strong{
+  font-size: 14px;
+}
+.oks-uni-select{
+   background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    height: 265px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+.oks-uni-select h3{
+        font-size: 32px;
+    margin: 0;
+    line-height: 42px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+.oks-uni-popup-btn{
+  position: absolute;
+    top: 12px;
+    right: 21px;
+    cursor: pointer;
+}
+.oks-uni-popup{
+      width: 100%;
+    max-width: 559px;
+    background: var(--secondry-color);
+    color: #fff;
+    position: fixed;
+    top: 50%;
+    box-shadow: 0 0 10px -4px;
+    padding: 42px;
+    z-index: 999;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.oks-top-university-sect{
+    padding: 75px 0 80px;
+    background: #d7e2e524;
+}
+.oks-uni-select:hover .oks-uni-btn{
+   visibility: visible; 
+   opacity: 1;
+}
+.oks-uni-btn {
+  background: #000000b0;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    height: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.oks-uni-btn a{
+  background: var(--primary-color);
+    font-size: 14px;
+    line-height: 24px;
+    padding: 8px 18px;
+    border-radius: 4px;
+    color: #000;
+}
+.oks-service-info-wrap{
+        display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    margin-right: 30px;
+}
+.oks-service-info-image{
+  width: 38%;
+}
+.oks-service-info-image img{
+    height: 140px;
+    width: 100%;
+    object-fit: cover;
+}
+.oks-service-info-content{
+  width: 55%;
+}
+.oks-service-info-content h3{
+      font-size: 17px;
+    line-height: 28px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.oks-service-info-content p{
+font-size: 13px;
+line-height: 23px;
+text-align: justify;
+}
+.oks-filter-program select{
+    font-size: 14px;
+    width: 100%;
+    line-height: 24px;
+    border: 1px solid #d3d3d369;
+    background: #fff;
+    padding: 10px;
+    height: 48px;
+}
+.oks-filter-program label{
+  font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+.oks-filter-program{
+  margin-bottom: 20px;
+}
+.oks-dis-filter-main-div-left hr{
+    margin: 35px 0 28px;
+    border-top: 1px solid #817777;
+}
+.oks-dis-study-level div {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 24px;
+}
+.oks-dis-study-level span {
+      margin-left: 10px; 
+  }
+.oks-dis-study-level p{
+    font-weight: bold;
+    line-height: 26px;
+    font-size: 16px;
+    color: #000;
+  }
+  .oks-dis-select-a-z-course, .oks-dis-filter-main-div-right .oks-show-more-btn, .oks-filte-btn button{
+    padding: 10px ;
+    border-radius: 4px;
+    border: 1px solid #d3d3d37d;
+    font-size: 14px;
+    line-height: 24px;
+      background: #fff;
+      width: 295px;
+      height: 53px;
+  }
+  .oks-dis-filter-main-div-left{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 24px;
+    background-color: white;
+    border-radius: 4px;
+  }
+  .oks-course-item-wrap{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 24px;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .eks-login-discover{
+    position: absolute;
+    width: 300px;
+    background: #ffff;
+    right: 0px;
+    top: 4px;
+    z-index: 99;
+    box-shadow: 0 0 4px -2px;
+    padding: 25px;
+    border-radius: 5px;
+  }
+  .oks-wishlist-icon{
+    font-size: 24px;
+  }
+  .oks-wishlist-icon a{
+    color: var(--secondry-color);
+  }
+  .oks-dis-filter-main-div-right h3{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+  .oks-dis-filter-main-div-right p{
+    margin-bottom: 8px!important;
+  }
+  .oks-dis-filter-main-div-right{
+        width: calc(100% - 40px);
+  }
+  .oks-application-btn{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .oks-application-btn p{
+    margin-bottom: 0!important;
+  }
+  .oks-dis-filter-main-div-right input {
+    font-size: 14px;
+    line-height: 24px;
+    margin-right: 10px;
+  }
+  .oks-dis-university-subject {
+        margin-top: 30px;
+  }
+.oks-dis-filter-reset span:nth-child(1){
+    font-size: 22px;
+      font-weight: 600;
+      line-height: 31px;
+  }
+  .oks-dis-filter-reset span:nth-child(2){
+    float: right;
+      color: red;
+      font-size: 16px;
+      line-height: 25px;
+  }
+  .oks-dis-filter-main-div-right .oks-show-more-btn{
+    width: 141px!important;
+      height: 45px!important;
+      margin-top: 20px;
+  }
+  .oks-show-more-btn i{
+    margin-left: 25px;
+  }
+  .oks-dis-after-bann-main-div-select-course{
+    text-align: right;
+  }
+  .oks-dis-after-bann-main-div-heading p{
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 0!important;
+  }
+  .oks-dis-after-bann-main-div {
+        margin-bottom: 40px;
+  }
+  .oks-discover-banner-first-h1 {
+    font-size: 52px;
+      line-height: 83px;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin: 0 0px 29px;
+  }
+  .resultcard_expanded{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .oks-application-btn .orangedot,
+.oks-application-btn .red,
+.oks-application-btn .green{
+    background: #fdd757;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin-right: 12px;
+  }
+  .oks-application-btn .red{
+    background: red!important;
+  }
+  .oks-application-btn .green{
+    background: green!important;
+  }
+  .neutralinfoblock.infoblock{
+    background-color: var(--secondry-color);
+    padding: 20px 25px;
+    color: #fff;
+  }
+  .footer-col{
+    width: 106px;
+    text-align: left;
+    margin: 0 auto!important;
+  }
+  .oks-decipline-section .col-lg-3:first-child .adtn-disp-card-box .oks-icon{
+    padding: 15px!important;
+  }
+  .neutralinfoblock.infoblock p.infoblockheader{
+    font-weight: 700;
+    margin-bottom: 0px!important;
+  }
+  .neutralinfoblock.infoblock p, .course_details p{
+    margin-bottom: 6px!important;
+  }
+  .resultcard_expanded .course_details table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.course_details table tr th, .course_details table tr td{
+      border: 1px solid #d3d3d352;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 14px 15px;
+}
+.course_details p span, .resultcard_expanded p span{
+  font-weight: 600;
+    margin-right: 8px;
+}
+.resultcard_expanded  .block{
+  margin: 10px 0!important;
+}
+.blockheading a{
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--secondry-color);
+}
+.resultcard_expanded, .oks-filte-btn, .mobile-close-popup{
+  display: none!important;
+}
+.resultcard_expanded.show, .submenu_content ul{
+  display: block!important;
+}
+.oks-show-more-btn.show i{
+  transform: rotate(180deg);
+}
+.oks-whislist-heading h3{
+      font-size: 24px;
+    line-height: 34px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.oks-wishlist-image{
+  background: url(../image/favourites.png);
+      padding-top: 32px;
+    min-height: 160px;
+    background-size: contain;
+    background-position: center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+}
+
+/*book consult*/
+
+.oks-book-consultent-wrap .dateandtime, .oks-book-consultent-wrap #help-required-specific, .oks-book-consultent-wrap #explain-what-you-need{
+            display: none;
+        }
+        .oks-book-consultent-wrap{
+          height: 100%;
+        }
+        .oks-book-consultent-wrap .latest-form-button, .book-buttons button,
+        .oks-book-consultent-wrap .previous-btn-last{
+               background-color: var(--primary-color);
+          border-radius: 5px;
+          border: none;
+          color: #000 !important;
+          box-shadow: none;
+          color: #656565;
+          font-size: 14px;
+          outline: none;
+          max-width: 135px;
+/*          margin-top: 15px!important;*/
+          line-height: 26px;
+          margin: 0;
+          padding: 8px 20px 8px 20px;
+          width: 100%;
+          font-weight: 700;
+        }
+        #explain-what-you-need{
+          text-align: right;
+        }
+        #explain-what-you-need label{
+          text-align: left;
+          display: block;
+        }
+
+        .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    button::-moz-focus-inner { 
+      border: 0;
+      padding: 0;
+    }
+
+    #calendar {
+        margin:  0 auto;
+        width: 336px;
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .oks-book-time{
+      display: inline-block;
+        width: 29%;
+        margin-left: 25px;
+    }
+    #calendar table {
+        border-collapse: collapse;
+        box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+        background-color: #fff;
+        width: 100%;
+    }
+
+    #calendar td,#calendar th {
+        text-align: center;
+        background-color: #ffcc01;
+    }
+    #calendar th {
+        padding: 10px;
+    }
+    #calendar tr:first-child th {
+        font-size: 20px;
+        font-weight: bold;
+        border-left: none;
+        border-top: none;
+    }
+    #calendar td:last-child, #calendar th:last-child {
+      border-right: none;
+    }
+
+    #calendar th {
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-right: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        border-left: 1px solid rgba(0,0,0,0.1);
+        background-color: #ffcc01;
+        color: #000;
+        text-shadow: 0px -1px 0px rgba(0,0,0,0.2);
+        font-weight: normal;
+    }
+    #calendar th .any {
+        font-size: 12px;
+        font-weight: normal;
+        display: block;
+        text-shadow: none;
+        color: rgba(0,0,0,0.4);
+    }
+    #calendar tr:nth-child(2) th {
+        padding: 10px;
+    }
+    #calendar td {
+        padding: 0;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    #calendar td>span {
+        color: #000;
+        padding: 7px;
+        display: block;
+        border: 2px solid transparent;
+        transition: border 0.3s ease;
+    }
+
+    #calendar td:nth-child(even)>span {
+        background-color: rgba(0,0,0,0.02);
+    }
+    #calendar td:last-child>span,
+    #calendar td:nth-child(6)>span {
+        color: #000;
+    }
+    #calendar td.avui>span {
+        font-weight: bold;
+        background-color: #000;
+        color: #fff;
+        border: 2px solid rgba(0,0,0,0.1);
+    }
+    #calendar td.fora > span {
+        opacity: 0.2;
+    }
+    #calendar td > span:hover {
+        background: #000;
+        color: #fff;
+    }
+
+    footer {
+      color: #ddd;
+      font-weight: normal;
+      font-size: 0.8em;
+      padding: 20px;
+    }
+
+    footer a,
+    footer a:link {
+      color: #fff;
+      text-decoration: none;
+    }
+    .oks-timer-item{
+      border: 1px solid;
+       padding: 10px 13px;
+       margin-bottom: 15px;
+       cursor: pointer;
+        border-radius: 6px;
+        width: 100%;
+    }
+    .oks-timer-item input{
+          width: auto!important;
+          height: auto!important;
+          margin-right: 8px!important;
+    }
+    .oks-timer-item span{
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .book-buttons button, .oks-book-consultent-wrap .previous-btn-last{
+      margin-right: 15px;
+    }
+    .book-buttons{
+      margin-top: 30px;
+    }
+    .oks-timer-item input[type='radio']:after {
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+          top: -2px;
+          left: -1px;
+          position: relative;
+          background-color: #d1d3d1;
+          content: '';
+          display: inline-block;
+          visibility: visible;
+          border: 2px solid white;
+      }
+
+      .oks-timer-item input[type='radio']:checked:after {
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+          top: -2px;
+          left: -1px;
+          position: relative;
+          background-color: var(--secondry-color);
+          content: '';
+          display: inline-block;
+          visibility: visible;
+          border: 2px solid white;
+      }
+/*login fomr*/
+.oks-signup-form, .oks-single-team{
+  border-top: 1px solid #d3d3d357;
+}
+.oks-login-form{
+/*    border-top: 1px solid #d3d3d357;*/
+    height: 860px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+.login-input{
+  position: relative;
+}
+.login-input input{
+      border-radius: 5px;
+    padding-left: 35px!important;
+}
+.oks-loginform-wrap .form-group label{
+  font-size: 13px!important;
+  line-height: 24px!important;
+}
+.login-input i{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 14px;
+}
+.oks-login-wrap{
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+    width: 450px;
+}
+.sign-up-button-div, .login-third-from-text{
+  text-align: center;
+}
+.sign-up-button-login button,
+.login-third-from-text a{
+    max-width: 109px;
+    display: block;
+    margin: 25px auto 6px!important;
+    font-size: 14px!important;
+    line-height: 25px!important;
+    padding: 6px 20px 6px 20px!important;
+    font-weight: 600!important;
+}
+.login-third-from-text span{
+        color: #0a0a0a;
+    font-weight: 500;
+    margin: 30px 0 0px;
+    display: block;
+}
+.oks-loginform-wrap h3{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+}
+.oks-loginform-wrap{
+      background-color: #ffffff85;
+/*    background-color: #fff;*/
+    box-shadow: 0 3px 25px rgb(0 0 0 / 21%);
+    padding: 34px;
+    border-radius: 4px;
+}
+.oks-sign-first-form, .oks-sign-up-second-form,
+.oks-sign-up-fourth-form, .oks-sign-up-fourth-form, .oks-sign-up-third-form{
+/*    background-color: #ffffff85;*/
+    background: #fff;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 34px;
+    border-radius: 4px;
+  }
+  .sign-up-button-div button{
+      margin: 6px 0 13px auto;
+  }
+  .oks-loginform-wrap .form-group, .oks-sign-first-form .form-group, .oks-sign-up-third-form .form-group,
+  .oks-sign-up-second-form .form-group, .oks-book-consultent-wrap .form-group, #help-required-specific .form-group{
+    margin-bottom: 15px;
+  }
+  .oks-loginform-wrap .form-group label, .oks-sign-first-form .form-group label, .oks-sign-up-third-form .form-group label,
+  .oks-sign-up-second-form .form-group label, .oks-book-consultent-wrap .form-group label, .oks-book-consultent-wrap label{
+    font-weight: 700;
+      margin-top: 3px;
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 9px;
+  }
+  .oks-loginform-wrap .form-group input, .oks-sign-first-form  .form-group input, .oks-sign-up-third-form .form-group input,
+   .oks-sign-up-third-form .form-group select, .oks-sign-up-second-form .form-group input, .oks-book-consultent-wrap .form-group select,
+   .oks-book-consultent-wrap .form-group input, .oks-sign-up-second-form .form-group select, .oks-book-consultent-wrap input{
+    font-size: 13px;
+    width: 100%;
+      line-height: 23px;
+      border: 1px solid #d3d3d369;
+      background: #fff;
+      padding: 10px;
+      height: 44px;
+  }
+  .first-form-button, .login-third-from-text a {
+  background-color: var(--primary-color);
+    border-radius: 4px;
+    border: none;
+    -webkit-box-shadow: none;
+    color: #000 !important;
+    box-shadow: none;
+    color: #656565;
+    font-size: 16px;
+    margin: 6px 0 13px;
+    outline: none;
+    line-height: 26px;
+    padding: 8px 20px 8px 20px;
+    width: 48%;
+    font-weight: 700;
+}
+.sign-up-button-div{
+      display: flex;
+    justify-content: space-between;
+}
+.oks-study-checkbox label{
+      display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500!important;
+}
+.oks-study-checkbox input{
+    height: 15px!important;
+    width: 20px!important;
+    border: none!important;
+    border: 1px solid #d3d3d36b!important;
+    border-radius: 0!important;
+    margin-right: 10px!important;
+}
+.third-from-text{
+  font-size: 14px;
+  line-height: 24px;
+}
+.oks-sign-up-second-form, .oks-sign-up-fourth-form, .oks-sign-up-third-form, .hidden{
+  display: none;
+}
+.oks-book-time-heading h3{
+  font-size: 26px!important;
+    line-height: 36px!important;
+    font-weight: 800!important;
+    color: #000!important;
+    text-align: center!important;
+    margin-bottom: 34px!important;
+}
+.sign-up-heading h3{
+    font-size: 23px;
+    line-height: 33px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+.oks-gender{
+  display: flex;
+}
+.oks-gender label{
+  position: relative;
+  height: 44px;
+  width: 135px;
+  border: 1px solid #d3d3d369;
+  font-weight: 600!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.oks-gender label input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.oks-gender .gender.checked{
+  border: 2px solid var(--secondry-color);
+  background: var(--secondry-color);
+  color: #fff;
+}
+.sign-up-checkbox{
+  margin-bottom: 8px;
+}
+.sign-up-paragraph p, .oks-sign-up-fourth-form p, .oks-sign-up-fourth-form .sign-up-checkbox label{
+      font-size: 13px;
+    line-height: 22px;
+}
+.sign-up-checkbox label{
+  font-size: 13px;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-start;
+}
+.sign-up-checkbox label input{
+  margin-right: 14px;
+    display: block;
+    margin-top: 6px;
+}
+.oks-sign-up-fourth-form h6{
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 700;
+}
+.oks-sign-up-fourth-form hr{
+  margin:20px 0;
+}
+.oks-sign-up-fourth-form .sign-up-button-div{
+  margin-top: 20px!important;
+}
+.oks-single-team .row{
+      gap: 30px;
+}
+.team_single_title h3{
+  font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #000;
+}
+.team_single_title small{
+      font-size: 14px;
+    font-weight: 600;
+    color: var(--secondry-color);
+    margin-bottom: 9px;
+    display: block;
+}
+.single_team_list ul li{
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+.single_team_list ul li i{
+  margin-right: 10px;
+  color: var(--secondry-color);
+}
+.oks-consult-image{
+  padding-left: 20px;
+}
+.oks-consult-image img{
+  height: 510px;
+    object-fit: cover;
+}
+/*wislilist*/
+.oks-disc-main-div {
+border-radius: 3px;
+background-color: white;
+padding: 0 30px;
+box-sizing: border-box;
+box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.oks-wishlist-content{
+  padding: 24px 16px 32px;
+  text-align: center;
+}
+.oks-wishlist-content .weight-medium{
+  font-weight: 600;
+  margin-bottom: 0!important;
+}
+.oks-wishlist-content .blockheading{
+  margin: 10px 0!important;
+}
+.oks-wishlist-content .block a{
+  font-size: 14px;
+    line-height: 24px;
+}
+.terms-and-condition-content{
+  height: 148px;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+}
+.terms-and-condition-content h4{
+      font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+}
+.terms-and-condition-content strong{
+  font-size: 14px;
+  line-height: 24px;
+}
+.terms-and-condition-content p{
+  margin-top: 4px!important;
+}
+.oks-signup-ani-wrap .eks-login-popup{
+  top: 71px;
+}
+.eks-login-popup a{
+  color: var(--secondry-color);
+}
+/*about us page*/
+  .oks-banner-content h1{
+      margin: 20px 0;
+      font-size: 54px;
+      line-height: 69px;
+    }
+    .oks-about-content-sec{
+      padding: 90px 0;
+    }
+    .oks-about-cont-image img{
+      width: 100%;
+        height: 540px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+    .oks-about-cont-content h2, .oks-contact-form-wrap h2{
+      text-align: left;
+      margin-bottom: 15px!important;
+    }
+    .oks-about-vision h3{
+      font-size: 20px;
+        line-height: 31px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: var(--secondry-color);
+    }
+    .about-section{
+      gap: 35px;
+    }
+    .oks-about-vision{
+      margin-top: 10px;
+    }
+    .team-image img{
+      width: 85%;
+      height: 265px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .team-image{
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .oks-main-content{
+      display: flex;
+      position: fixed;
+      width: 100%;
+      justify-content: space-between;
+      padding: 50px;
+      box-shadow: 0 0 10px 0 #00000059;
+      top: 50%;
+      z-index: 99;
+      max-width: 880px;
+      background: #1b4ba6;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .team-image img {
+      width: 215px;
+      height: 215px;
+    }
+    .oks-team-popup-info .oks-content h3{
+      color: #fff!important;
+    }
+    .oks-content h3{
+      font-size: 18px;
+        line-height: 28px;
+        color: #fff;
+        cursor: pointer;
+        text-align: center;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 5px;
+    }
+    .oks-content-popup p{ 
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #fff;
+    }
+    .oks-team-popup-info{
+      width: 28%;
+    }
+    .oks-content-popup{
+      width: 65%;
+    }
+    .oks-team-member:hover .team-image .team-icon{
+      right: 0;
+    }
+    .oks-content small{
+      text-align: center;
+        display: block;
+        color: var(--primary-color);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+    .team-icon{
+      position: absolute;
+        top: 24%;
+        right: -49px;
+      transition: 0.3s ease-in-out;
+    }
+    .team-icon ul{
+      background: var(--secondry-color);
+        padding: 9px 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .team-icon ul li{
+      font-size: 16px;
+        line-height: 25px;
+        padding: 7px 6px 7px 11px;
+    }
+    .team-icon li a{
+      color: white;
+    }
+    .oks-our-teams-sec .oks-section-content h2{
+      color: #fff!important;
+    }
+    .oks-our-teams-sec{
+      padding:70px 0 85px;
+      background: var(--secondry-color);
+    }
+    .oks-contact-us{
+      padding: 80px 0;
+    }
+    .oks-contact-us .social-button ul{
+      justify-content: flex-start;
+    }
+    .oks-contact-info{
+      padding-bottom: 25px;
+        margin-bottom: 31px;
+        border-bottom: 1px solid #d3d3d373;
+    }
+    .social-button ul li:hover{
+      background: var(--primary-color);
+    }
+    .social-links .social-button ul li{
+      padding: 5px 0;
+        width: 40px;
+        height: 38px;
+        margin-top: 4px;
+        margin-right: 14px;
+        text-align: center;
+        border-radius: 4px;
+        background: var(--secondry-color);
+    }
+    .social-links .social-button ul li a {
+        color: #fff;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .oks-contact-form input,
+    .oks-contact-form textarea, #help-required-specific textarea{
+      width: 100%;
+        border: none;
+        border: 1px solid #d3d3d36b;
+        height: 54px;
+        border-radius: 1px;
+        margin-bottom: 34px;
+        font-size: 14px;
+        background: transparent;
+        padding: 10px 15px;
+    }
+    .oks-contact-form{
+      margin-top: 30px;
+    }
+    .oks-contact-form textarea, #help-required-specific textarea{
+      height: 150px;
+    }
+    .oks-contact-us .row{
+      gap: 88px;
+    }
+    .oks-contact-info h3, .social-button h3{
+      font-size: 22px;
+        line-height: 30px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 15px;
+    }
+    .oks-contact-info ul li{
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 4px;
+    }
+    .oks-contact-info ul li i{
+      margin-right: 10px;
+      margin-bottom: 12px;
+      color: var(--secondry-color);
+    }
+    .form-sbmt-btn{
+      background-color: var(--secondry-color)!important;
+      max-width: 198px;
+        border-radius: 4px!Important;
+        text-align: center;
+        height: 52px!Important;
+        color: #fff;
+        font-size: 16px!important;
+        line-height: 24px;
+        font-weight: 600;
+    }
+    #progressbar, #book-progressbar{
+      display: flex;
+      justify-content: space-between;
+    }
+    #progressbar li.active, #book-progressbar li.active span{
+      background: var(--primary-color);
+    }
+    #book-progressbar li.active{
+      color: var(--secondry-color);
+    }
+    #book-progressbar li{
+     width: 32%!important;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    }
+    #progressbar li{
+      height: 7px;
+      border-radius: 7px;
+      width: 32%;
+      background: #d3d3d380;
+    }
+    #book-progressbar li span{
+      display: block;
+      height: 7px;
+       border-radius: 7px;
+       margin-top: 10px;
+      background: #d3d3d380;
+      width: 100%;
+    }
+    .sign-up-progressbar{
+          margin-bottom: 45px;
+    }
+    .sign-up-progressbar p{
+     font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 700;
+    }
+    .oks-primary-menu-login, .oks-login-user-menu .menu-toggle .fa-xmark,
+    .oks-login-user-menu .menu-toggle.active .fa-bars, .menu-toggle.active span{
+      display: none;
+    }
+    .mypages-container{
+      position: absolute;
+      padding: 29px 0;
+      top: 57px;
+      display: none;
+      z-index: 999;
+      box-shadow: 0 0 9px -4px;
+      width: 300px;
+      right: 1px !important;
+      background: #fff;
+    }
+    .oks-login-user-menu .menu-toggle{
+          background: no-repeat;
+    border: none;
+    font-size: 22px;
+    }
+    .oks-login-user-menu .menu-toggle, .oks-login-user-menu .menu-toggle.active .fa-xmark,
+    .menu-toggle.active .oks-primary-menu-login, .mypages-container.toggle, .oks-primary-menu-login.toggle{
+      display: block;
+    }
+    .oks-primary-menu-login.toggle ul{
+        display: block!important;
+        position: fixed;
+        background: rgb(255, 255, 255);
+        right: 0;
+        width: 100%;
+        top: 0px;
+        height: 100%;
+        z-index: 9;
+        height: 100%;
+        max-width: 400px;
+        padding: 35px 0;
+        box-shadow: 0 0 9px -4px;
+    }
+    .oks-login-user-menu .menu-toggle.active{
+      position: fixed;
+      top: 9px;
+      z-index: 9999;
+      right: 12px;
+    }
+    .submenu_content ul li{
+      text-align: left!important;
+      border-top: 1px solid #d3d3d39e!important;
+      border-bottom: 0!important;
+    }
+    .submenu_content ul li.log-out{
+      text-align: center!important;
+    }
+    .submenu_content ul li.log-out a{
+       background-color: var(--primary-color);
+      border-radius: 4px;
+      border: none;
+      color: #000 !important;
+      color: #656565;
+      font-size: 16px;
+      margin: 6px 0 13px!important;
+      outline: none;
+      line-height: 26px;
+      padding: 8px 20px 8px 20px;
+      width: 100%;
+      font-weight:700;
+      display: block;
+    }
+    .mypages-container .name{
+      padding: 15px 20px;
+      nt-size: 14px!important;
+      line-height: 24px!important;
+      font-weight: 500!important;
+      text-align: left!important;
+      color: #000;
+    }
+    .submenu_content ul li a{
+      font-size: 14px!important;
+      line-height: 24px!important;
+    }
+    .oks-primary-menu-login.toggle ul li, .submenu_content ul li{
+      padding: 15px 20px;
+      margin: 0!important;
+      border-bottom: 1px solid #d3d3d39e;
+    }
+    .adtn-serive-card-box:hover .oks-icon, .adtn-disp-card-box:hover .oks-icon{
+      background: var(--primary-color);
+    }
+    .blockheading{
+    margin-top: 20px!important;
+  }
+  .oks-content-box h3 i{
+    display: none;
+  }
+  .oks-content-box strong{
+    display: block;
+  }
+  .oks-content-box span{
+    display: block;
+    margin-bottom: 8px;
+  }
+  .oks-signup-ani-wrap{
+    overflow: hidden;
+    position: relative;
+  }
+  .oks-signup-animation{
+    position: relative;
+    z-index: 999;
+  }
+  .oks-sign-up-header{
+    padding: 10px 0;
+    box-shadow: 0 0 14px -4px;
+  }
+  .oks-signup-form-sect{
+    padding: 70px 0;
+  }
+  .oks-signup-form-wrap{
+    width: 450px;
+    margin: 0 auto;
+  }
+  .oks-signup-ani-wrap .landing{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .oks-signup-ani-wrap.active .mountain-scene{
+    height: 88%;
+  }
+  .oks-signup-ani-wrap .mountain-scene{
+    height: 85%;
+  }
+  .oks-signup-ani-wrap .ground{
+    height: 15%;
+  }
+@media screen and (max-width:600px){
+  .oks-about-image img, .oks-easyguide-content, .oks-team-popup-info{
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .oks-login-wrap {
+    top: 52%;
+  }
+  .oks-signup-form-wrap {
+    width: 92%!important;
+  }
+  .oks-signup-form-sect {
+    padding: unset !important;
+    height: 100vh !important;
+}
+  #clouds{
+    padding: 28vw 0;
+  }
+  .tri:before{
+    height: 104%;
+  }
+  .landing{
+    background: linear-gradient( 136deg, #ffcc01 6%, #1b4ba6 25% );
+  }
+  .oks-login-form{
+      height: 748px;
+  }
+  .oks-austria-sidebar{
+    display: none;
+  }
+  .oks-login-wrap{
+    width: 330px;
+  }
+  .accordion-item .oks-content-box{
+    border: 1px solid #d3d3d382;
+    padding: 12px 11px;
+  }
+  .oks-austria-sec-content {
+    margin-bottom: 25px;
+}
+  .oks-austria-sec-content h3 {
+      font-size: 15px;
+      line-height: 25px;
+      margin-bottom: 0px;
+  }
+  .accordion-item .oks-content-box h3 i{
+    float: right;
+    display: block;
+    margin-top: 3px;
+  }
+  .accordion-item .oks-content-box h3.active i{
+    transform: rotate(180deg);
+  }
+  .accordion-item .oks-content-box p{
+    margin-top: 10px;
+  }
+  .oks-main-content{
+    display: block;
+    overflow: scroll;
+    height: 100%;
+    top: 58%;
+  }
+  .oks-loginform-wrap, .oks-sign-first-form, .oks-sign-up-second-form, .oks-sign-up-fourth-form, .oks-sign-up-fourth-form, .oks-sign-up-third-form{
+    padding: 20px!important;
+  }
+  .oks-about-banner, .oks-explore-banner, .oks-belgium-banner, .oks-finland-banner, .oks-discover-banner, .wishlist-banner{
+    padding: 70px 0!important;
+  }
+  #book-progressbar li {
+    width: 31%!important;
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: 600;
+}
+.oks-book-time{
+  width: 100%;
+    margin-top: 30px;
+    margin-left: 0;
+}
+  .mypages-container {
+       width: 100%;
+    top: 72px;
+    left: 0;
+    position: fixed;
+  }
+  .dashborad-header .oks-primary-menu ul li a,
+  .oks-sign-up-header .oks-primary-menu ul li a{
+    color: #000!important;
+  }
+  .oks-about-cont-image img, .#calendar{
+    width: 100%!important;
+    height: auto!important;
+  }
+  .oks-selec-bar select, .oks-dis-search input{
+    margin-bottom: 10px;
+  }
+  .oks-easyguide-image img, .oks-content-popup, .footer-col{
+    width: 100%!important;
+  }
+  .oks-consult-serv-wrap, .oks-consult-image{
+    padding: 0;
+    background: transparent;
+  }
+  .oks-user-log-info ul li a span, .menu-toggle span {
+    font-size: 11px;
+    line-height: 20px;
+  }
+  .oks-user-log-info ul li {
+    margin-left: 12px!important;
+    margin-right: 6px;
+  }
+  .oks-dis-dropdown-search-button{
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .oks-banner-content h1{
+    font-size: 44px!important;
+    line-height: 54px!important;
+  }
+  .oks-banner-content h1 span{
+    display: inline;
+  }
+  .oks-country-info, .oks-decipline-wrap, .oks-blogs-item, .oks-subscription-plan-wrap,
+  .oks-testimonial-item, .footer-col, .oks-team-member, .oks-dis-after-bann-main-div-heading, .adtn-serive-card-box, .adtn-disp-card-box{
+    margin:0 0 30px 0!important;
+    height: auto;
+  }
+  .oks-about-banner .oks-banner-content h1{
+      font-size: 42px!important;
+      line-height: 60px!important;
+      margin: 0!important;
+  }
+  .oks-discover-banner-first-h1{
+    font-size: 42px!important;
+    line-height: 52px!important;
+    margin-bottom: 20px!important;
+  }
+  .oks-discover-banner{
+    padding: 80px 0!important;
+  }
+  h2{
+    font-size: 30px!important;
+    line-height: 43px!important;
+  }
+  .main-navigation .menu-toggle{
+    border: 0;
+    background: transparent;
+    font-size: 21px;
+    line-height: 30px;
+    display: block;
+  }
+  .menu-toggle .fa-xmark, .oks-main-menu .oks-primary-menu{
+    display: none;
+  }
+  .oks-user-info ul li:last-child{
+    margin-right: 0;
+  }
+  .site-header .col-2, .dashborad-header .col-2,
+  .oks-sign-up-header .col-2{
+    order:3;
+  }
+  .site-logo a img {
+    width: 125px;
+  }
+  .oks-primary-menu{
+        display: block;
+    position: fixed;
+    background: rgb(255, 255, 255);
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+    z-index: 9;
+  }
+  .oks-primary-menu ul{
+    padding: 55px 30px;
+    display: block!important;
+  }
+  .oks-primary-menu ul li{
+    padding: 18px 0;
+    border-bottom: 1px solid #d3d3d382;
+    margin: 0!important;
+  }
+  .oks-primary-menu ul li:last-child{
+    border:none;
+  }
+  .oks-section-heading h2, .oks-consult-serv-wrap h2, .oks-section-content h2, .ks-section-content h2,
+  .oks-testimonial-content h2, .oks-blogs-content h2, .oks-dis-filter-main-div-left{
+    margin-bottom: 25px!important;
+  }
+  .oks-get-started-section, .oks-testimonial-section, .oks-about-content-sec{
+    padding: 70px 0;
+  }
+  .menu-toggle.active{
+    z-index: 999;
+    position: fixed;
+    top: 22px;
+  }
+  .menu-toggle.active .fa-xmark, .oks-started-btn, .oks-filte-btn, .oks-whislit-sidebar.oks-dis-filter-main-div-left{
+    display: block!important;
+  }
+  .menu-toggle.active .fa-bars, .oks-dis-filter-main-div-left{
+    display: none;
+  }
+  .oks-whislit-sidebar.oks-dis-filter-main-div-left{
+    position: static;
+    margin-top: 30px;
+  }
+  .oks-started-btn a{
+    margin: 30px auto 0;
+  }
+  .oks-country-information, .oks-decipline-section, .oks-faqs-section, .oks-easyguide-section,
+  .oks-blogs-section, .oks-home-about, .oks-contact-us, .service-subscription, .oks-listing-blog,
+  .oks-discover-after-banner, .oks-whisl-none-section, .oks-signup-form{
+    padding: 60px 0;
+  }
+  .oks-select-course{
+    margin-bottom: 20px;
+  }
+  .btn-form-search{
+    width: 100%;
+  }
+  .site-header{
+    padding: 10px 0;
+  }
+  .oks-user-info ul li a{
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .oks-consult-service {
+    background-image: linear-gradient(rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(../image/counseling.jpeg);
+  }
+  .oks-about-banner{
+    padding: 90px 0!important;
+  }
+  .oks-submenu-container ul{
+    padding: 0!important;
+    width: 100%;
+    box-shadow: none!important;
+    position: relative!important;
+    visibility: visible!important;
+    opacity: 1!important;
+    display: none!important;
+  }
+  .oks-submenu-container ul.active, .mobile-close-popup{
+    display: block!important;
+  }
+  .oks-submenu-container ul.active, .mobile-close-popup{
+    padding-top: 5px!important;
+    left: auto!important;
+    top: auto!important;
+    padding-left: 15px!important;
+  }
+  .oks-filte-btn button{
+    width: 109px!important;
+  }
+  .mobile-close-popup{
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+  }
+  .oks-dis-after-bann-main-div-select-course{
+    display: flex;
+    justify-content: space-between;
+  }
+  .oks-dis-select-a-z-course{
+    width: 220px;
+  }
+  .oks-dis-filter-main-div-left{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    left: 0;
+    z-index: 999;
+  }
+  .owl-dots{
+    text-align: center;
+  }
+  .oks-about-cont-content{
+    margin-bottom: 25px;
+  }
+  .oks-login-footer{
+    padding: 0!important;
+  }
+  .eks-login-popup {
+    right: 31px;
+  }
+  .oks-single-blog-detail{
+    margin-bottom: 30px;
+    padding: 0;
+    border: none;
+  }
+  .oks-single-blog-detail h2{
+        font-size: 21px!important;
+    line-height: 31px!important;
+  }
+  .oks-about-banner .oks-banner-content.detail-blog h1{
+    font-size: 28px!important;
+    line-height: 38px!important;
+  }
+}
+@media screen and (min-width:601px) and (max-width:1050px){
+   .main-navigation .menu-toggle{
+    border: 0;
+    background: transparent;
+    font-size: 21px;
+    line-height: 30px;
+    display: block;
+  }
+  .menu-toggle .fa-xmark, .oks-main-menu .oks-primary-menu{
+    display: none;
+  }
+  .oks-user-info ul li:last-child{
+    margin-right: 0;
+  }
+  .menu-toggle.active .fa-bars{
+    display: none;
+  }
+  .site-header .col-2, .dashborad-header .col-2,
+  .oks-sign-up-header .col-2{
+    order:3;
+  }
+  .site-logo a img {
+    width: 125px;
+  }
+  .oks-primary-menu{
+        display: block;
+    position: fixed;
+    background: rgb(255, 255, 255);
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+    z-index: 9;
+  }
+  .menu-toggle.active .fa-xmark{
+    display: block!important;
+  }
+   .menu-toggle.active{
+    z-index: 999;
+    position: fixed;
+    top: 22px;
+  }
+  .oks-primary-menu ul{
+    padding: 55px 30px;
+    display: block!important;
+  }
+  .oks-primary-menu ul li{
+    padding: 18px 0;
+    border-bottom: 1px solid #d3d3d382;
+    margin: 0!important;
+  }
+  .oks-primary-menu ul li:last-child{
+    border:none;
+  }
+  .oks-select-course, .oks-about-image, .oks-subscription-plan{
+    margin-bottom: 20px;
+    text-align: left!important;
+  }
+  .oks-country-info, .oks-decipline-wrap, .oks-blogs-item, .oks-testimonial-item, .oks-easyguide-content{
+    margin: 0 0 20px 0;
+    height: auto;
+  }
+  .oks-home-searchbar .col-lg-1{
+    margin: 0!important;
+  }
+  .oks-easyguide-image img{
+    width: 100%;
+  }
+  .oks-banner-content h1, .oks-about-banner .oks-banner-content h1, .oks-finland-banner .oks-banner-content h1.
+  .oks-belgium-banner .oks-banner-content h1, .oks-explore-banner .oks-banner-content h1{
+    font-size: 52px!important;
+    line-height: 63px!important;
+  }
+  .oks-dis-button button {
+    font-size: 14px!important;
+    line-height: 23px!important;
+  }
+  .adtn-serive-card-box, .adtn-disp-card-box, .oks-subscription-plan-wrap, .oks-about-cont-content{
+    margin-bottom: 25px!important;
+    height: auto!important;
+  }
+  .owl-dots{
+    text-align: center;
+  }
+  .oks-main-menu #site-navigation ul li a{
+    color: #000!important;
+  }
+  .oks-submenu-container ul{
+    padding: 0!important;
+    width: 100%;
+    box-shadow: none!important;
+    position: relative!important;
+    visibility: visible!important;
+    opacity: 1!important;
+    display: none!important;
+  }
+  .oks-submenu-container ul.active, .mobile-close-popup{
+    display: block!important;
+  }
+  .oks-submenu-container ul.active, .mobile-close-popup{
+    padding-top: 5px!important;
+    left: auto!important;
+    top: auto!important;
+    padding-left: 15px!important;
+  }
+  .oks-dis-filter-main-div-left, .oks-single-blog-detail{
+    margin-bottom: 30px!important;
+  }
+  .oks-our-teams-sec .row{
+    gap:0!important;
+  }
+  .mobile-close-popup{
+    display: none!important;
+  }
+}
