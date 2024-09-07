@@ -15,7 +15,8 @@ class UsersController extends Controller
 {
     public function index()
     {
-        return view('content.users.index');
+        $users = User::where('is_admin','=','0')->get();
+        return view('content.users.index',compact('users'));
     }
 
     // public function UsersList(Request $request)
@@ -235,11 +236,13 @@ class UsersController extends Controller
 
     public function delete($id)
     {
-        $user = User::find($id);
+        
+        $user = User::where('id','=',$id)->first();
+     
         if ($user) {
             $user->delete();
         }
-        return view('content.users.index', compact('user'));
+       return redirect()->back()->with('success', 'The User is deleted successfully.');
     }
 
     public function makeAdmin($id)

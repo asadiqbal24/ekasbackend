@@ -40,7 +40,7 @@
 
 <div class="card">
   <div class="card-header pb-0">
-    <h5 class="card-title mb-0">Users</h5>
+    <h5 class="card-title mb-0 mb-3">Users</h5>
   </div>
   <div class="card-datatable table-responsive">
     <table class="datatables-users table">
@@ -54,6 +54,18 @@
             <th scope="col">Actions</th>
         </tr>
       </thead>
+      <tbody>
+        @foreach($users as $user)
+        <tr>
+          <td>{{$loop->iteration}}</td>
+          <td>{{$user->fname}} {{$user->lname}}</td>
+          <td>{{$user->email}}</td>
+          <td>{{$user->datetime}}</td>
+          <td>User</td>
+          <td><a href="{{url('delete/user',$user->id)}}" class="btn btn-sm btn-icon btn-text-secondary rounded-pill waves-effect"  onclick="return confirm('Are you sure you want to delete this?')" ><i class="ri-delete-bin-7-line ri-20px"></i></a> </td>
+        </tr>
+        @endforeach
+      </tbody>
     </table>
   </div>
  

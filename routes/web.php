@@ -231,6 +231,8 @@ Route::group(['middleware' => ['auth']], function() {
 Route::middleware([AdminMiddleware::class])->group(function () {
 
     Route::get('/appointment-list', [SessionsController::class, 'appointment_list'])->name('appointment-list');
+    Route::get('/zoom-link/{id}', [SessionsController::class, 'zoom_link'])->name('zoom-link');
+    Route::post('zoom-link-store', [SessionsController::class, 'zoom_link_store'])->name('zoom-link-store');
     Route::get('/user-session-report/{id}', [SessionsController::class, 'user_session_report'])->name('user-session-report');
     Route::post('session-pdf-store', [SessionsController::class, 'user_session_report_store'])->name('session-pdf-store');
 
@@ -567,4 +569,8 @@ Route::get('/auth/two-steps-cover', [TwoStepsCover::class, 'index'])->name('auth
 
 Auth::routes();
 
+Route::get('/ekas-guidance-list', [App\Http\Controllers\HomeController::class, 'ekas_guidance_list'])->name('ekas-guidance-list');
+Route::DELETE('/ekas-guidance-delete/{id}', [App\Http\Controllers\HomeController::class, 'ekas_guidance_delete'])->name('ekas-guidance-delete');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('document-checker', [App\Http\Controllers\HomeController::class, 'document_checker'])->name('document-checker');
+Route::DELETE('document-checker-delete/{id}', [App\Http\Controllers\HomeController::class, 'document_checker_delete'])->name('document-checker-delete');

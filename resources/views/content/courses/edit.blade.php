@@ -171,7 +171,7 @@
           </div> -->
 
           <div class="mb-3 row">
-            <label class="col-md-2 col-form-label">Select Field of Study</label>
+            <label class="col-md-2 col-form-label">Subject Field</label>
             <div class="col-md-10">
             
               <select name="fieldofstudy" id="fieldofstudy" class="form-control">

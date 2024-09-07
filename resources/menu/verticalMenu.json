@@ -51,11 +51,7 @@
       "icon": "menu-icon tf-icons ri-database-2-line",
       "slug": "Courses",
       "submenu": [
-        {
-          "url": "/add/course",
-          "name": "Add Courses",
-          "slug": "addcourse"
-        },
+ 
         {
           "url": "/courses",
           "name": "All Courses",
@@ -63,8 +59,8 @@
         },
         {
           "url": "/excel/upload",
-          "name": "Excel Upload",
-          "slug": "excel_upload"
+          "name": "Import",
+          "slug": "import"
         }
       ]
     },
@@ -223,7 +219,25 @@
           "slug": "rolelist"
         }
       ]
+    },
+    {
+      "name": "Documents",
+      "icon": "menu-icon tf-icons ri-database-2-line",
+      "slug": "Documents",
+      "submenu": [
+        {
+          "url": "document-checker",
+          "name": "Document Checker",
+          "slug": "documentchecker"
+        },
+        {
+          "url": "ekas-guidance-list",
+          "name": "Ekas Guidance",
+          "slug": "ekasguidancelist"
+        }
+      ]
     }
+
 
     
     

@@ -130,8 +130,11 @@
 </div> --}}
 <!-- Users List Table -->
 <div class="card">
-  <div class="card-header pb-0">
+  <div class="card-header pb-0 d-flex"  style="justify-content: space-between;">
+      
     <h5 class="card-title mb-5">Courses</h5>
+      <a href="{{route('addCourse')}}" class="btn btn-primary" style="    padding: 5px 14px;
+    height: 40px;">Add Courses</a>
   </div>
   <div class="card-datatable table-responsive">
     <table class="datatables-users table">
@@ -141,7 +144,7 @@
           <th scope="col">#</th>
           <th scope="col">University Name</th>
           <th scope="col">Program Name</th>
-          <th scope="col">Field Of Study</th>
+          <th scope="col">Subject Field</th>
           <th scope="col">Location</th>
           <th scope="col">Actions</th>
           
