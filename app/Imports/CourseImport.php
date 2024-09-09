@@ -53,6 +53,7 @@ class CourseImport implements ToModel, WithHeadingRow
             'fieldofstudy' => $row['subject_field'],
             'tuitionfee' => $row['tuition_fee'],
             'location' => $row['location'],
+            'country' => $row['country'],
             'EntryRequirement' => $row['entry_requirement'],
             'IELTSTOFELRequirement' => $row['ieltstoefl_requirement'],
             'GREGMATSATRequirement' => $row['gregmat_requirement'],
