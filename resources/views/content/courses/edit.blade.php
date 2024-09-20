@@ -173,15 +173,19 @@
           <div class="mb-3 row">
             <label class="col-md-2 col-form-label">Subject Field</label>
             <div class="col-md-10">
-            
+
+
+
+
               <select name="fieldofstudy" id="fieldofstudy" class="form-control">
                 <option value="NULL">Choose</option>
                 @foreach($course_category as $category)
                 <option value="{{ $category->name }}"
-                  {{ isset($course->fieldofstudy) && trim(strtolower($course->fieldofstudy)) == trim(strtolower($category->name)) ? 'selected' : '' }}>
+                  {{ strtolower(trim($course->fieldofstudy)) === strtolower(trim($category->name)) ? 'selected' : '' }}>
                   {{ $category->name }}
                 </option>
                 @endforeach
+
               </select>
               @error('fieldofstudy')
               <small class="text-danger">{{ $message }}</small>

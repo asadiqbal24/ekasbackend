@@ -18,9 +18,9 @@ class CourseController extends Controller
         $heading = 'Add Courses';
         $sub_heading = 'You can add courses here';
         $course_category = DB::table('course_category')->get();
-        return view('content.courses.add', compact('heading', 'sub_heading', 'course','course_category'));
+        return view('content.courses.add', compact('heading', 'sub_heading', 'course', 'course_category'));
     }
-    
+
     public function store(Request $request)
     {
         $request->validate(
@@ -29,7 +29,7 @@ class CourseController extends Controller
                 'programmename' => 'required',
                 'ranking' => 'required',
                 'level' => 'required',
-                'fieldofstudy'=> 'required',
+                'fieldofstudy' => 'required',
                 'tuitionfee'    => 'required',
                 'location'    => 'required',
                 'EntryRequirement'    => 'required',
@@ -56,13 +56,73 @@ class CourseController extends Controller
 
 
 
-    public function getCourses()
-    {
-        //  dd("true");
+    // public function getCourses($uni_name ,$prog_name,$field_of_study, $location)
+    // {
+    //       dd($uni_name);
 
-       $courses =AddCourse::get();
-        
-        return view('content.courses.index',compact('courses'));
+    //     $courses = AddCourse::where('deleted_at', '=', NULL)->orderBy('id', 'DESC')->paginate(20);
+
+
+    //     return view('content.courses.index', compact('courses'));
+    // }
+
+    public function getCourses(Request $request)
+    {
+        // Retrieve query parameters
+        $uni_name = $request->input('uni_name');
+        $prog_name = $request->input('prog_name');
+        $field_of_study = $request->input('field_of_study');
+        $location = $request->input('location');
+    
+        // Build the query
+        $query = AddCourse::whereNull('deleted_at');
+    
+        if ($uni_name) {
+            $query->where('universityname', 'like', "%$uni_name%");
+        }
+        if ($prog_name) {
+            $query->where('programmename', 'like', "%$prog_name%");
+        }
+        if ($field_of_study) {
+            $query->where('fieldofstudy', 'like', "%$field_of_study%");
+        }
+        if ($location) {
+            $query->where('location', 'like', "%$location%");
+        }
+    
+        // Paginate results and append query parameters
+        $courses = $query->orderBy('id', 'desc')->paginate(20)->appends($request->query());
+    
+        return view('content.courses.index', compact('courses'));
+    }
+
+
+    public  function coursesview($id) {
+    
+
+        $course = AddCourse::find($id);
+        $heading = 'View Course';
+        return view('content.courses.view', compact('course','heading'));
+
+      
+    }
+    
+
+
+
+    public function trash_courses()
+    {
+
+
+
+        $courses = DB::table('addcourses')
+            ->whereNotNull('deleted_at')
+            ->orderBy('id', 'desc')
+            ->paginate(20);
+
+        //dd($courses);
+
+        return view('content.courses.trashs', compact('courses'));
     }
 
     public function coursesList(Request $request)
@@ -77,7 +137,7 @@ class CourseController extends Controller
 
         $search = [];
 
-        
+
 
         $totalData = AddCourse::whereNull('deleted_at')->count();
 
@@ -159,7 +219,9 @@ class CourseController extends Controller
         $heading = 'Edit Course';
         $sub_heading = 'You can edit Courses here';
         $course_category = DB::table('course_category')->get();
-        return view('content.courses.edit', compact('heading', 'sub_heading', 'course','course_category'));
+        //   / dd($course ,$course_category);
+
+        return view('content.courses.edit', compact('heading', 'sub_heading', 'course', 'course_category'));
     }
     public function update(Request $request, $id)
     {
@@ -206,8 +268,10 @@ class CourseController extends Controller
     }
     public function delete($id)
     {
-        AddCourse::find($id)->delete();
-        return redirect()->back()->with('message', 'Course moved to trash successfully.');
+       $course = AddCourse::find($id);
+       $course->deleted_at = 1;
+       $course->save();
+      return redirect()->back()->with('message', 'Course moved to trash successfully.');
     }
 
     public function importData()
@@ -240,5 +304,43 @@ class CourseController extends Controller
         $ids = explode(',', $request->input('selected_course_ids'));
         AddCourse::whereIn('id', $ids)->forceDelete();
         return redirect()->back()->with('message', 'Courses permanently deleted.');
+    }
+
+
+    public function DeleteCourses(Request $request)
+    {
+        $courseIds = $request->input('course_ids');
+
+        //dd($courseIds);
+
+        if (!empty($courseIds)) {
+            // Delete the selected courses
+            $courses = AddCourse::whereIn('id', $courseIds)->get();
+
+            foreach ($courses as $course) {
+                $course->deleted_at = now();
+                $course->save();
+            }
+        }
+
+        return redirect()->back()->with('success', 'Selected courses have been deleted successfully.');
+    }
+
+
+    public function RemoveCourses(Request $request)
+    {
+
+        $courseIds = $request->input('course_ids');
+
+        if (!empty($courseIds)) {
+
+            $courses = AddCourse::whereIn('id', $courseIds)->get();
+            foreach ($courses as $course) {
+                $course->deleted_at = null;
+                $course->save();
+            }
+        }
+
+        return redirect()->back()->with('success', 'Selected courses have been removed successfully.');
     }
 }

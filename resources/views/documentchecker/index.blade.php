@@ -70,14 +70,27 @@
             <td>{{$check->phone}}</td>
             <td>{{$check->amount}}</td>
             <td>{{$check->status}}</td>
-            <td>
-            <!-- <a class="btn btn-sm btn-icon btn-text-secondary rounded-pill waves-effect send-notification-btn">
-              <i class="ri-send-plane-line ri-20px"></i>
-            </a> -->
+
+
+            <td >
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Actions
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{{route('document-checker-pdf',$check->id)}}">Update Doc Info</a></li>
+
+                  <li><a class="dropdown-item" data-id="{{$check->id}}"  href="javascript:void(0);" onclick="return confirmDelete(this)">Delete</a></li>
+                  
+                </ul>
+              </div>
+            </td>
+            <!-- <td>
+          
             <a class="btn btn-sm btn-icon btn-text-secondary rounded-pill waves-effect delete-btn" data-id="{{$check->id}}" href="javascript:void(0);" onclick="return confirmDelete(this)">
               <i class="ri-delete-bin-7-line ri-20px"></i>
             </a>
-          </td>
+          </td> -->
         </tr>
         @endforeach
       </tbody>

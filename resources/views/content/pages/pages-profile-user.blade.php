@@ -7,13 +7,13 @@
 @vite([
   'resources/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.scss',
   'resources/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.scss',
-  'resources/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.scss'
+
 ])
 @endsection
 
 <!-- Page Styles -->
 @section('page-style')
-@vite(['resources/assets/vendor/scss/pages/page-profile.scss'])
+
 @endsection
 
 <!-- Vendor Scripts -->
@@ -23,7 +23,7 @@
 
 <!-- Page Scripts -->
 @section('page-script')
-@vite(['resources/assets/js/pages-profile-user.js'])
+
 @endsection
 
 @section('content')

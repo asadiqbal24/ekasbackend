@@ -442,8 +442,15 @@ Route::get('/subscribers-list', [UserManagement::class,'subscribersList'])->name
 Route::get('add/course', [CourseController::class, 'index'])->name('addCourse');
 Route::post('store', [CourseController::class, 'store'])->name('course.store');
 
-Route::get('courses', [CourseController::class, 'getCourses'])->name('courses');
+//Route::get('courses/{uni_name?}/{prog_name?}/{field_of_study?}/{location?}', [CourseController::class, 'getCourses'])->name('courses');
+Route::get('courses/{uni_name?}/{prog_name?}/{field_of_study?}/{location?}', [CourseController::class, 'getCourses'])->name('courses');
+
+Route::post('delete/admin/courses', [CourseController::class, 'DeleteCourses'])->name('bulk-delete-courses');
+Route::post('remove/admin/courses', [CourseController::class, 'RemoveCourses'])->name('bulk-remove-courses');
+Route::get('trash/courses', [CourseController::class, 'trash_courses'])->name('trash-courses');
+
 Route::get('/courses-list', [CourseController::class,'coursesList'])->name('subscribersList');
+Route::get('/courses-view/{id}', [CourseController::class,'coursesview'])->name('courses-view');
 
 
 Route::get('get/all/users', [UsersController::class, 'index']);
@@ -573,4 +580,9 @@ Route::get('/ekas-guidance-list', [App\Http\Controllers\HomeController::class, '
 Route::DELETE('/ekas-guidance-delete/{id}', [App\Http\Controllers\HomeController::class, 'ekas_guidance_delete'])->name('ekas-guidance-delete');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('document-checker', [App\Http\Controllers\HomeController::class, 'document_checker'])->name('document-checker');
+Route::get('document-checker-pdf/{id}', [App\Http\Controllers\HomeController::class, 'document_checker_pdf'])->name('document-checker-pdf');
+
+Route::post('/document/approve', [App\Http\Controllers\HomeController::class, 'approve'])->name('document.approve');
+Route::post('/document/disapprove', [App\Http\Controllers\HomeController::class, 'disapprove'])->name('document.disapprove');
+
 Route::DELETE('document-checker-delete/{id}', [App\Http\Controllers\HomeController::class, 'document_checker_delete'])->name('document-checker-delete');

@@ -56,11 +56,6 @@
           "url": "/courses",
           "name": "All Courses",
           "slug": "allcourses"
-        },
-        {
-          "url": "/excel/upload",
-          "name": "Import",
-          "slug": "import"
         }
       ]
     },

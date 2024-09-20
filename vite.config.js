@@ -68,8 +68,8 @@ export default defineConfig({
                 'resources/assets/js/main.js',
                 'resources/js/courses.js',
                 'resources/js/subscribers.js',
-                'resources/assets/js/form-layouts.js,
-                'resources/assets/js/pages-auth.js', 
+                'resources/assets/js/form-layouts.js',
+                'resources/assets/js/pages-auth.js'
                 
                 
                 
